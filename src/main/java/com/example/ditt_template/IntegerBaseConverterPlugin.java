@@ -3,9 +3,9 @@ package com.example.ditt_template;
 import org.pf4j.Plugin;
 import org.pf4j.PluginWrapper;
 
-public class YourPlugin extends Plugin {
+public class IntegerBaseConverterPlugin extends Plugin {
 
-    public YourPlugin(PluginWrapper wrapper) {
+    public IntegerBaseConverterPlugin(PluginWrapper wrapper) {
         super(wrapper);
     }
 

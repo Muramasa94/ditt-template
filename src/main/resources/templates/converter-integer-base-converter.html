@@ -1,0 +1,88 @@
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{base.html}">
+    <div layout:fragment="custom-content" class="container mt-5">
+        <div class="card custom-card">
+            <div class="card-body">
+                <h2 class="card-title">Integer Base Converter</h2>
+                <p class="card-subtitle">Convert a number between different bases (decimal, hexadecimal, binary, octal, base64, ...)</p>
+
+                <div class="mt-4">
+                    <label for="inputNumber" class="form-label">Input number</label>
+                    <input type="text" id="inputNumber" class="form-control custom-input" value="0">
+                </div>
+
+                <div class="mt-3">
+                    <label for="inputBase" class="form-label">Input base</label>
+                    <div class="input-group">
+                        <input type="number" id="inputBase" class="form-control custom-input" value="10" min="2" max="64">
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="results">
+                    <div class="result-item">
+                        <label>Binary (2)</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control custom-input" id="resultBinary" readonly>
+                            <button class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy to clipboard" onclick="copyToClipboard('#resultBinary')">
+                                <i class="bi bi-clipboard"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="result-item">
+                        <label>Octal (8)</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control custom-input" id="resultOctal" readonly>
+                            <button class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy to clipboard" onclick="copyToClipboard('#resultOctal')">
+                                <i class="bi bi-clipboard"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="result-item">
+                        <label>Decimal (10)</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control custom-input" id="resultDecimal" readonly>
+                            <button class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy to clipboard" onclick="copyToClipboard('#resultDecimal')">
+                                <i class="bi bi-clipboard"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="result-item">
+                        <label>Hexadecimal (16)</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control custom-input" id="resultHexadecimal" readonly>
+                            <button class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy to clipboard" onclick="copyToClipboard('#resultHexadecimal')">
+                                <i class="bi bi-clipboard"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="result-item">
+                        <label>Base64 (64)</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control custom-input" id="resultBase64" readonly>
+                            <button class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy to clipboard" onclick="copyToClipboard('#resultBase64')">
+                                <i class="bi bi-clipboard"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-3">
+                    <label>Custom:</label>
+                    <div class="input-group">
+                        <input type="number" id="customBase" class="form-control custom-input" value="42" min="2" max="64">
+                        <input type="text" id="resultCustom" class="form-control custom-input" readonly>
+                        <button class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy to clipboard" onclick="copyToClipboard('#resultCustom')">
+                            <i class="bi bi-clipboard"></i>
+                            </button>
+                    </div>
+                    <div id="customBaseError" class="text-danger mt-1" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</html>
