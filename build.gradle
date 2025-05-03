@@ -64,5 +64,6 @@ tasks.named('shadowJar') {
 //    - CSS files: src/main/resources/static/css
 //    - JS files: src/main/resources/static/js
 //    - HTML files: src/main/resources/templates (exclude base.html)
+// 	  - plugin.properties: src/main/resources/plugin.properties
 // 6. Zip the folder containing the renamed JAR file and the copied resources.
 // 7. The zipped plugin is now ready for distribution.
